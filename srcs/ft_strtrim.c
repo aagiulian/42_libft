@@ -1,31 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcat.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/13 20:22:38 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/16 22:46:38 by agiulian         ###   ########.fr       */
+/*   Created: 2016/09/17 18:23:27 by agiulian          #+#    #+#             */
+/*   Updated: 2016/09/17 19:19:16 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-char	*ft_strcat(char *s1, const char *s2)
+char	*ft_strtrim(char const *s)
 {
-	int i;
-	int j;
+	unsigned int	i;
+	unsigned int	j;
+	unsigned int	k;
+	char			*s_n;
 
 	i = 0;
-	j = 0;
-	while (s1[i])
+	j = ft_strlen(s) - 1;
+	while (s[i] == '\n' || s[i] == ' ' || s[i] == '\t')
 		i++;
-	while (s2[j])
+	if (s[i] == '\0')
+		return ("");
+	while (s[j] == '\n' || s[j] == ' ' || s[j] == '\t')
+		j--;
+	s_n = ft_strnew(j - i + 1);
+	if (s_n == NULL)
+		return (NULL);
+	while (k < j - i + 1)
 	{
-		s1[i + j] = s2[j];
-		j++;
+		s_n[k] = s[i + k];
+		k++;
 	}
-	s1[i + j] = '\0';
-	return (s1);
+	s_n[k] = '\0';
+	return (s_n);
 }

@@ -6,14 +6,26 @@
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/14 17:54:21 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/16 18:48:54 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/17 20:28:54 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-char	*ft_itoa(int n)
+static char	*ft_fillstr(unsigned int save, int size, int i, char *s)
+{
+	while (size > 0)
+	{
+		s[i] = (save / size) + '0';
+		save %= size;
+		size /= 10;
+		i++;
+	}
+	s[i] = '\0';
+	return (s);
+}
+
+char		*ft_itoa(int n)
 {
 	unsigned int	save;
 	int				size;
@@ -36,19 +48,6 @@ char	*ft_itoa(int n)
 		s[i] = '-';
 		i++;
 	}
-	while (size > 0)
-	{
-		s[i] = (save / size) + '0';
-		save %= size;
-		size /= 10;
-		i++;
-	}
-	s[i] = '\0';
+	s = ft_fillstr(save, size, i, s);
 	return (s);
-}
-
-int		main(void)
-{
-	printf("%s\n", ft_itoa(-2147483648));
-	return (0);
 }

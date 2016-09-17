@@ -6,16 +6,16 @@
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/13 20:39:05 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/13 20:47:34 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/17 00:02:30 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <string.h>
 
-char	*ft_strncat(char *restrict s1, const char *restrict s2, size_t n)
+char	*ft_strncat(char *s1, const char *s2, size_t n)
 {
-	unsigned int i;
-	unsigned int j;
+	size_t		 i;
+	size_t		 j;
 
 	i = 0;
 	j = 0;

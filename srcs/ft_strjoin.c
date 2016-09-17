@@ -1,26 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/09/13 21:14:26 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/17 17:45:21 by agiulian         ###   ########.fr       */
+/*   Created: 2016/09/17 18:05:36 by agiulian          #+#    #+#             */
+/*   Updated: 2016/09/17 18:20:22 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+char	*ft_strjoin(char const *s1,char const *s2)
 {
-	size_t	i;
+	char	*s_n;
 
-	i = 0;
-	while (s1[i] && s2[i] && i < n)
-	{
-		if ((unsigned char)s1[i] != (unsigned char)s2[i])
-			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
-	}
-	return (0);
+	s_n = ft_strnew(ft_strlen(s1) + ft_strlen(s2));
+	if (s_n == NULL)
+		return (NULL);
+	while (*s1)
+		*s_n++ = *s1++;
+	while (*s2)
+		*s_n++ = *s2++;
+	*s_n = '\0';
+	return (s_n);
 }
