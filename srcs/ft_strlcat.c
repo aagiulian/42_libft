@@ -6,13 +6,13 @@
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/13 20:39:05 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/17 00:24:17 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/17 22:08:57 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../includes/libft.h"
+#include "libft.h"
 
-size_t	ft_strncat(char *dst, const char *src, size_t size)
+size_t	ft_strlcat(char *dst, const char *src, size_t size)
 {
 	size_t		 i;
 	size_t		 j;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: agiulian <arthur.giuliano@student.42.fr    +#+  +:+       +#+        */
+/*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/14 00:19:04 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/14 00:19:59 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/17 22:21:15 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

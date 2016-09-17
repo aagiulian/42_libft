@@ -6,7 +6,7 @@
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/17 19:42:05 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/17 20:15:59 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/17 22:52:43 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ char	**ft_strsplit(char const *s, char c)
 	i = 0;
 	j = 0;
 	tab = (char**)malloc(sizeof(char*) * (ft_countword(s, c) + 1));
-	if (tab = NULL)
+	if (tab == NULL)
 		return (NULL);
 	while (s[i])
 	{
@@ -52,7 +52,7 @@ char	**ft_strsplit(char const *s, char c)
 			i++;
 		if (k != i)
 		{
-			tab[j] = ft_strndup(s + i, k - i)
+			tab[j] = ft_strndup(s + i, k - i);
 			j++;
 		}
 	}

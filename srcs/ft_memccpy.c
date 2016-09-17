@@ -6,13 +6,13 @@
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/16 20:27:07 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/16 22:17:54 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/17 21:53:30 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, int c, size_t n)
+void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 {
 	unsigned char		*dst_ptr;
 	const unsigned char	*src_ptr;

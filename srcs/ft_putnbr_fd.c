@@ -6,7 +6,7 @@
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/14 17:27:41 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/14 17:51:53 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/17 22:53:41 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_putnbr_fd(int n, int fd)
 	size = 1;
 	if (n < 0)
 	{
-		ft_putchar_fd('-');
+		ft_putchar_fd('-', fd);
 		save1 = -n;
 	}
 	else
@@ -31,7 +31,7 @@ void	ft_putnbr_fd(int n, int fd)
 		size *= 10;
 	while (size != 0)
 	{
-		ft_putchar_fd((save1 / size) + '0');
+		ft_putchar_fd((save1 / size) + '0', fd);
 		save1 = save1 % size;
 		size /= 10;
 	}

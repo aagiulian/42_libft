@@ -6,11 +6,11 @@
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/13 21:05:20 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/13 21:05:59 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/17 21:43:01 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_atoi(char *str)
+int	ft_atoi(const char *str)
 {
 	int i;
 	int result;

@@ -6,7 +6,7 @@
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/17 18:23:27 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/17 19:19:16 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/17 22:59:34 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,7 @@ char	*ft_strtrim(char const *s)
 
 	i = 0;
 	j = ft_strlen(s) - 1;
+	k = 0;
 	while (s[i] == '\n' || s[i] == ' ' || s[i] == '\t')
 		i++;
 	if (s[i] == '\0')

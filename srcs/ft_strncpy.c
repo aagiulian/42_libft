@@ -6,11 +6,11 @@
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/13 20:13:47 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/13 20:25:18 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/17 22:12:21 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <string.h>
+#include "libft.h"
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {

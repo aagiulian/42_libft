@@ -6,7 +6,7 @@
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/17 01:22:39 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/17 01:26:18 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/17 22:52:18 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_strdel(char **as)
 {
 	free(*as);
-	*as = NULL:
+	*as = NULL;
 }

@@ -6,7 +6,7 @@
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/17 01:26:50 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/17 01:30:08 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/17 22:49:52 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_strclr(char *s)
 {
-	ft_bzero(*s, ft_strlen(s));
+	ft_bzero(s, ft_strlen(s));
 }
