@@ -6,12 +6,12 @@
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/17 16:57:37 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/17 17:04:52 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/18 21:19:30 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 void	ft_striter(char *s, void (*f)(char*))
 {
 	while (*s)
-		f(s);
+		f(s++);
 }

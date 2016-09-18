@@ -6,7 +6,7 @@
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/13 20:52:44 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/17 22:59:07 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/18 21:17:12 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,9 +27,9 @@ char	*ft_strstr(const char *big, const char *little)
 		i = 0;
 		while (big[j + i] == little[i])
 		{
-			i++;
 			if (i == len - 1)
 				return ((char*)big + j);
+			i++;
 		}
 		j++;
 	}

@@ -6,7 +6,7 @@
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/14 17:54:21 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/17 20:28:54 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/18 19:57:09 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,14 +33,15 @@ char		*ft_itoa(int n)
 	char			*s;
 
 	size = 1;
-	i = 0;
+	i = (n < 0) ? 2 : 1;;
 	save = (n < 0) ? (-n) : n;
 	while (((save /= 10) > 0))
 	{
 		size *= 10;
 		i++;
 	}
-	s = (char*)malloc(sizeof(char) * i + 1);
+	if(!(s = (char*)malloc(sizeof(char) * i + 1)))
+		return (NULL);
 	save = (n < 0) ? (-n) : (n);
 	i = 0;
 	if (n < 0)

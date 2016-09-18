@@ -6,13 +6,13 @@
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/14 00:19:04 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/17 22:21:15 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/18 19:28:29 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 int	ft_tolower(int c)
 {
-	if (c >= 'A' && c >= 'Z')
+	if (c >= 'A' && c <= 'Z')
 		return (c + 32);
 	return (c);
 }

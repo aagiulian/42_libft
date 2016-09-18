@@ -6,7 +6,7 @@
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/17 19:42:05 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/17 22:52:43 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/18 21:52:36 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static int	ft_countword(char const *s, char c)
 	{
 		while (s[i] == c)
 			i++;
-		if (s[i] != c)
+		if (s[i])
 			count++;
 		while (s[i] && s[i] != c)
 			i++;
@@ -52,7 +52,7 @@ char	**ft_strsplit(char const *s, char c)
 			i++;
 		if (k != i)
 		{
-			tab[j] = ft_strndup(s + i, k - i);
+			tab[j] = ft_strndup(s + k, i - k);
 			j++;
 		}
 	}

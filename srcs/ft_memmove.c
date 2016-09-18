@@ -6,7 +6,7 @@
 /*   By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/09/16 22:29:33 by agiulian          #+#    #+#             */
-/*   Updated: 2016/09/16 23:37:39 by agiulian         ###   ########.fr       */
+/*   Updated: 2016/09/18 19:08:01 by agiulian         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	if (dst_c > src_c)
 	{
 		while (len--)
-			dst_c[len - 1] = src_c[len - 1];
+			dst_c[len] = src_c[len];
 	}
 	else
 	{
-		while (len--)
+		while (i < len)
 		{
 			dst_c[i] = src_c[i];
 			i++;
