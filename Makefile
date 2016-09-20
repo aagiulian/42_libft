@@ -6,11 +6,11 @@
 #    By: agiulian <arthur.giuliano@student.42.fr>   +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2016/09/17 22:23:16 by agiulian          #+#    #+#              #
-#    Updated: 2016/09/17 22:48:54 by agiulian         ###   ########.fr        #
+#    Updated: 2016/09/20 22:52:40 by agiulian         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-C = gcc
+CC = gcc
 
 NAME = libft.a
 
@@ -67,13 +67,25 @@ SRC = srcs/ft_atoi.c \
 	  srcs/ft_strchr.c \
 	  srcs/ft_strjoin.c \
 	  srcs/ft_strnequ.c \
-	  srcs/ft_toupper.c
+	  srcs/ft_toupper.c \
+	  srcs/ft_lstnew.c \
+	  srcs/ft_lstdelone.c \
+	  srcs/ft_lstdel.c \
+	  srcs/ft_lstadd.c \
+	  srcs/ft_lstiter.c \
+	  srcs/ft_lstmap.c
 
 HEAD = -Iincludes/
+
+ECHO = printf
+
+%.o	:	%.c 
+		@$(CC) $(CFLAGS) -o $@ -c $<&& $(ECHO) "\033[31m["$@"] \n\033[0m"
 
 OBJECT = $(SRC:.c=.o)
 
 CFLAGS = $(HEAD) -Wall -Werror -Wextra
+
 
 all: $(NAME)
 
@@ -82,7 +94,7 @@ $(NAME): $(OBJECT)
 	ranlib $(NAME)
 
 clean:
-	rm -f $(OBJECT)
+	@rm -f $(OBJECT) && $(ECHO) "\033[32m[Deleting objects]\033[0m\n"
 
 fclean: clean
 	rm -f $(NAME)
